@@ -1,0 +1,67 @@
+body{
+    font-family: "ヒラギノ角ゴ Pro W3","Arial","メイリオ",Verdana,"ＭＳ Ｐゴシック",sans-serif;
+    background: url(../img/dbook.jpg) center center / cover no-repeat fixed;
+    color: white;
+    }
+
+.container-fluid{
+    padding-top: 80px;
+    }
+
+.row{
+    margin: 0 auto;
+    max-width:960px;
+}
+
+table{
+    background-color: rgba(51,51,51,0.9);
+}
+
+#login{
+    padding: 40px 60px 50px;
+    background-color:rgba(51,51,51,0.8);
+    text-align: center;
+}
+
+.box {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin:7px;
+    cursor: pointer;
+    background-color: aliceblue;
+}
+.box:hover {
+    background-color: #70bcff;
+}
+
+.box img{
+    position:relative;
+    top:15px;
+    left:31px;
+}
+.box_txt{
+    text-align: center;
+    margin-top: 15px;
+    font-weight:bold;
+}
+
+#rlist{
+    padding: 10px 20px 20px;
+    background-color: rgba(51,51,51,0.8);
+    text-align: center;
+}
+
+#mpage{
+    padding: 10px 20px 20px;
+    background-color: rgba(51,51,51,0.8);
+}
+
+#mpage th{
+    width:20%;
+}
+
+#ulist{
+    padding: 10px 20px 20px;
+    background-color: rgba(51,51,51,0.8);
+}

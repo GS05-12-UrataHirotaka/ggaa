@@ -1,0 +1,24 @@
+body{
+    font-family: "ヒラギノ角ゴ Pro W3","Arial","メイリオ",Verdana,"ＭＳ Ｐゴシック",sans-serif;
+    background: url(../img/dbook.jpg) center center / cover no-repeat fixed;
+    color: white;
+    }
+
+.container-fluid{
+    margin-top: 100px;
+    }
+
+.row{
+    margin: 0 auto;
+    max-width:960px;
+}
+
+table{
+    background-color: rgba(51,51,51,0.6);
+}
+
+#login{
+    margin-top: 50px;
+    background-color:rgba(255,255,255,0.2);
+    text-align: center;
+}
