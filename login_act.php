@@ -34,7 +34,7 @@ if( $val["id"] != "" ){
     $_SESSION["lid"] = $val["lid"];
     $_SESSION["name"] = $val["name"];
     $_SESSION["role"] = $val["role"];   
-  header("Location: bm_list_view.php");
+  header("Location: mypage.php");
 }else{
   //logout処理を経由して全画面へ
   header("Location: login.php");

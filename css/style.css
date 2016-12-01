@@ -1,0 +1,208 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px; 
+} 
+html{
+    height:100%;
+}
+body{
+    color:#000;
+    font-family:"Helvetica Neue",Helvetica,Arial,YuGothic,"Yu Gothic",游ゴシック体,"游ゴシック","ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,"MS ゴシック","MS Gothic",sans-serif;
+    font-size:14px;
+    height: 100%;
+}
+
+/*全体共通*/
+.container-fluid{
+    padding-top: 100px;
+    }
+.row{
+    margin: 0 auto;
+}
+
+/*見出し共通*/
+.topic{
+    text-align: center;
+    margin: 0 auto;
+    font-size:24px;
+    color:#1987e5;
+}
+
+/*メイン画像*/
+.maint{
+    background-image:url(../img/topimage3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height:250px;
+    margin:20px 0 0 0;
+}
+
+/*ニュース*/
+#news{
+    margin:0 auto;
+    max-width: 960px;
+    overflow: hidden    
+}
+#news > .topic{
+    margin: 50px 0 10px 0;
+}
+#news table{
+    max-width: 600px;
+    margin: 0 auto;
+}
+#news th{
+    text-align: right;
+}
+#news td{
+    text-align: left;
+}
+#news .right{
+    text-align: right;
+    margin: 10px 180px 50px 0;
+}
+
+/*記事*/
+.feature{
+    margin: 0 auto;
+    overflow: hidden;
+}
+.feature > .topic{
+    padding:30px 0 40px 0;
+}
+.feature{
+    padding: 0 30px 30px 10px; 
+}
+
+.fimage1{
+    background-image:url(../img/top1a.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    height:300px;
+}
+
+.fimage2{
+    background-image:url(../img/top2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height:200px;
+    margin: 20px;
+}
+
+.fimage3{
+    background-image:url(../img/top3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height:200px;
+    margin: 20px;
+}
+
+.fimage4{
+    background-image:url(../img/top4.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height:200px;
+    margin: 20px;
+}
+
+.fimage5{
+    background-image:url(../img/vietnam10.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height:200px;
+}
+
+.feature p{
+    line-height: 180%;
+}
+
+.flead{
+    text-align: center;
+}
+/*ページトップに戻る*/
+#pageTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+ 
+#pageTop a {
+  display: block;
+  z-index: 999;
+  padding: 8px 0 0 8px;
+  border-radius: 30px;
+  width: 35px;
+  height: 35px;
+  background-color: #9FD6D2;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+ 
+#pageTop a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+
+.navbar-default {
+    background-color: #ffffff;
+    color: #272672;
+    font-weight: bold;
+}
+
+
+/*ログイン*/
+#login{
+    padding: 40px 60px 50px;
+    background-color:rgba(122,194,232,0.9);
+    text-align: center;
+}
+
+/*ボックス*/
+.box {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin:7px;
+    cursor: pointer;
+    background-color: aliceblue;
+}
+.box:hover {
+    background-color: #70bcff;
+}
+.box img{
+    position:relative;
+    top:15px;
+    left:31px;
+}
+.box_txt{
+    text-align: center;
+    margin-top: 15px;
+    font-weight:bold;
+}
+
+#rlist{
+    padding: 10px 20px 20px;
+}
+
+#mpage{
+    padding: 10px 20px 20px;
+    background-color:rgba(122,194,232,0.1);
+}
+
+#mpage th{
+    width:20%;
+}
+
+#ulist{
+    padding: 10px 20px 20px;
+    background-color:rgba(122,194,232,0.1);
+}

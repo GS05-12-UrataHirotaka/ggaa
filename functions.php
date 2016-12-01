@@ -1,7 +1,7 @@
 <?php
 /** 共通で使うものを別ファイルにしておきましょう。*/
 
-//LognCheck関数
+//LoginCheck関数
 function ssidCheck(){
     if(
         !isset($_SESSION["schk"]) || 

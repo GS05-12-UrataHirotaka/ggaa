@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top Page</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 1000; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+</script>
+</head>
+ 
+<body>
+<!-- Head[Start] -->
+<?php  
+    if($_SESSION["kanri_flg"]=="1"){
+        include("admin_menu.php");
+    }else{
+        include("bm_menu.php");
+    }
+    
+?>
+<!-- Head[End] -->
+
+<!-- Main[Start] -->
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<body>
+<div id="header">
+    <h1 class="logo">
+        <a href="#">
+            <img src="img/logo.png" alt="Cheese ACADEMY TOKYO">
+        </a>    
+    </h1>
+    <p class="txt">
+        <b>CHEESE DEVELOPMENT<br>GROWTH CHEESE<br>CHEESE PERSPECTIVE<br>CHEESE GENERATOR</b>
+    </p>
+</div>
+<div id="mainvisual">
+    <img src="img/catch.png" alt="キャッチコピー">
+</div>
+<div id="news">
+    <h2 class="topic">
+        <p class="midashi1"><font color="#FFCC00">NEWS</font></p>
+        <p class="midashi2">お知らせ・更新情報</p>
+    </h2>
+    <dl>
+        <dt>2015.07.12</dt>
+        <dd><a href="#">初日開講しました！</a></dd>
+        <dt>2015.06.12</dt>
+        <dd><a href="#">初めてのチーズハッカソンを開催しました！</a></dd>
+        <dt>2015.04.11</dt>
+        <dd><a href="#">トーキョーチーズFes.を開催いたしました！</a></dd>
+    </dl>
+    <div class="right">
+        <a href="#">ニュース一覧を見る</a>
+    </div>
+</div>
+<div id="feature">
+    <h2 class="topic">
+        <p class="midashi1"><font color="#FFFFFF">FEATURE</p>
+        <p class="midashi2">特徴</p>
+    </h2>
+    <ul class="inline">
+        <li><img src="img/point1.png" alt="point1"></li>
+        <li><img src="img/point2.png" alt="point2"></li>
+        <li><img src="img/point3.png" alt="point3"></li>
+    </ul>
+</div>
+<div id="course">
+    <h2 class="topic">
+        <p class="midashi1">COURSE</p>
+        <p class="midashi2">コース紹介</p>
+    </h2>
+    <div class="lab">
+        <img src="img/cource-lab.png" alt="lab">
+        <p class="ctitle">LABコース</p>
+        <p class="ctext">週末集中型の初心者対象のチーズ職人養成講座です。<br>週末集中型の初心者対象のチーズ職人養成講座です。<br>週末集中型の初心者対象のチーズ職人養成講座です。<br>週末集中型の初心者対象のチーズ職人養成講座です。<br>週末集中型の初心者対象のチーズ職人養成講座です。</p>
+    </div>
+    <div class="academy">
+        <img src="img/cource-academy.png" alt="academy">
+        <p class="ctitle">ACADEMYコース</p>
+        <p class="ctext">週末集中型の初心者対象のチーズ職人養成講座です。<br>週末集中型の初心者対象のチーズ職人養成講座です。<br>週末集中型の初心者対象のチーズ職人養成講座です。<br>週末集中型の初心者対象のチーズ職人養成講座です。<br>週末集中型の初心者対象のチーズ職人養成講座です。</p>
+    </div>
+</div>
+<div id="gallery">
+    <h2 class="topic">
+        <p class="midashi1">GALLERY</p>
+        <p class="midashi2"><font color="#fffff">ギャラリー</font></p>
+    </h2>
+    <div class="center">
+        <ul class="float">
+            <li id="e_1"><a href="#"><img src="img/gallery01.jpg"></a></li>
+            <li id="e_2"><a href="#"><img src="img/gallery02.jpg"></a></li>
+            <li id="e_3"><a href="#"><img src="img/gallery03.jpg"></a></li>
+            <li id="e_4"><a href="#"><img src="img/gallery04.jpg"></a></li>
+            <li id="e_5"><a href="#"><img src="img/gallery05.jpg"></a></li>
+            <li id="e_6"><a href="#"><img src="img/gallery06.jpg"></a></li>
+            <li id="e_7"><a href="#"><img src="img/gallery07.jpg"></a></li>
+            <li id="e_8"><a href="#"><img src="img/gallery08.jpg"></a></li>
+            <li id="e_9"><a href="#"><img src="img/gallery09.jpg"></a></li>
+            <li id="e_10"><a href="#"><img src="img/gallery10.jpg"></a></li>
+            <li id="e_11"><a href="#"><img src="img/gallery11.jpg"></a></li>
+            <li id="e_12"><a href="#"><img src="img/gallery12.jpg"></a></li>
+        </ul>
+    </div>
+</div>
+<div id="entry">
+    <h2 class="topic">
+        <p class="midashi1">ENTRY</p>
+        <p class="midashi2"><font color="#fffff">説明会に申し込む</font></p>
+    </h2>
+    <form method="POST" action="judge.php">
+        <dl>
+            <dt>氏名</dt>
+            <dd><input type="text" size="30" value="" id="e_1" name="name"></dd>
+            <dt>フリガナ</dt>
+            <dd><input type="text" size="30" value="" id="e_2" name="furigana"></dd>
+            <dt>メールアドレス</dt>
+            <dd><input type="text" size="30" value="" id="e_3" name="mail"></dd>
+            <dt>説明会の希望日時</dt>
+            <dd>
+                <select name="date" id="e_4">
+                    <option value="0719">7/19 19:00～</option>
+                    <option value="0726">7/26 19:00～</option>
+                </select>
+            </dd> 
+            <dt>志望動機</dt>
+            <dd>
+                <input type="radio" name="reason" value="起業をしたい" id="re_1">
+                <label for="re_1">起業をしたい</label><br>
+                <input type="radio" name="reason" value="チーズ系企業に就職したい" id="re_2">
+                <label for="re_2">チーズ系企業に就職したい</label><br>
+                <input type="radio" name="reason" value="チーズと関わる仕事なので、知識をつけたい" id="re_3">
+                <label for="re_3">チーズと関わる仕事なので、知識をつけたい</label><br>
+                <input type="radio" name="reason" value="教養として身につけたい" id="re_4">
+                <label for="re_4">教養として身につけたい</label><br>
+            </dd>
+        </dl>
+        <div class="entry_f">
+        <input type="submit" name="entry" value="" id="entry_button">
+        </div>
+    </form>
+</div>
+<div id="information">
+    <h2 class="topic">
+        <p class="midashi1"><font color="#ffffff">INFORMATION</font></p>
+        <p class="midashi2"><font color="#ffffff">基本情報</font></p>
+    </h2>
+    <div class="info">
+        <ul class="float">
+            <li class="li1"><p><img src="img/kunsei_cheese.png"></p></li>
+            <li><p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.393780938418!2d139.71168946480296!3d35.667304788343955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c9faa72a551%3A0xb1a498fbd6ac0c76!2z44CSMTA3LTAwNjEg5p2x5Lqs6YO95riv5Yy65YyX6Z2S5bGx77yT5LiB55uu77yV4oiS77yWIOmdkuaci-ODk-ODq--8te-8sumDveW4guapn-ani-WMl-mdkuWxseS4ieS4geebruesrOS6jOW4guihl-WcsOS9j-WuhQ!5e0!3m2!1sja!2sjp!4v1468590065735" width="310" height="210" frameborder="0" style="border:0" allowfullscreen></iframe></p></li>
+            <li><p><img src="img/kunsei_cheese.png"></p></li>
+        </ul>
+        <div class="note">※実際にはチーズアカデミーという学校は存在しません。<br>くれぐれも間違ってデジタルハリウッドにお問い合わせすることのないようにご注意ください。</div>
+        <div class="right"><a href="#"><img src="img/btn-pagetop.png" alt="ページトップへ戻る"></a></div>
+    </div>
+</div>
+</body>

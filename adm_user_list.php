@@ -4,7 +4,7 @@ session_start();
 include('functions.php');
 ssidCheck();
 
-if($_SESSION["role"]!="1"){
+if($_SESSION["role"]!="2"){
     exit("Error!!");
 }
 
@@ -56,7 +56,7 @@ if($status==false){
     $view .= h($result["life_flg"]);
     $view .= "</td>";
     $view .= "<td>";
-    $view .= '<a class="btn btn-primary" href="user_update_view.php?id='.$result["id"].'">';
+    $view .= '<a class="btn btn-primary" href="adm_user_update.php?id='.$result["id"].'">';
     $view .= 'Edit';
     $view .= '</a>';  
     $view .= "</td>";
@@ -72,21 +72,27 @@ if($status==false){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>User's List</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/connectab.css" rel="stylesheet">
-  <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body id="main">
 
 <!-- Head[Start] -->
 <?php  
-    if($_SESSION["role"]=="1"){
-        include("admin_menu.php");
+    if(isset($_SESSION["role"])){
+        if($_SESSION["role"]=="0"){
+            include("menu_rsc.php");
+        }else if($_SESSION["role"]=="1"){
+            include("menu_org.php");
+        }else if($_SESSION["role"]=="2"){
+            include("menu_adm.php");
+        }
     }else{
-        include("bm_menu.php");
+        include("menu_gst.php");
     }
-    
 ?>
 <!-- Head[End] -->
 
@@ -94,8 +100,8 @@ if($status==false){
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
+           <h2>User's List　<a class="btn btn-primary" href="adm_user_insert.php">Add User</a></h2>
            <div id="ulist">
-            <h2>User's List　<a class="btn btn-primary" href="user_insert_view.php">Add User</a></h2>
             <table class="table">
             <thead>
                <tr>
@@ -124,7 +130,6 @@ if($status==false){
 <!-- Main[End] -->
 
 <nav>
-    <p style="text-align:right;padding-right:30px;"><font color="white">PHOTO taken by manfred majer</font></p>
 </nav>
 
 </body>

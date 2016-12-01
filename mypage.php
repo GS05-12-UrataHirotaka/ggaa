@@ -20,24 +20,34 @@ if($status==false){
     $row = $stmt->fetch();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Researcher's Detail</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/connectab.css" rel="stylesheet">
-  <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top Page</title>
+<link rel="stylesheet" href="css/reset.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
+
 <body>
 <!-- Head[Start] -->
 <?php  
-    if($_SESSION["role"]=="1"){
-        include("admin_menu.php");
-    }else if($_SESSION["role"]=="0"){
-        include("bm_menu.php");
+    if(isset($_SESSION["role"])){
+        if($_SESSION["role"]=="0"){
+            include("menu_rsc.php");
+        }else if($_SESSION["role"]=="1"){
+            include("menu_org.php");
+        }else if($_SESSION["role"]=="2"){
+            include("menu_adm.php");
+        }
+    }else{
+        include("menu_gst.php");
     }
 ?>
 <!-- Head[End] -->
@@ -47,9 +57,9 @@ if($status==false){
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
-            <div id="mpage">
-                <h2 style="text-align:center;">My Page</h2>
-                <h3>ユーザ情報　<a class="btn btn-primary" href="userinfo_edit_view.php">Edit</a></h3>
+            <h2>My Page</h2>
+               <div id="mpage">
+               <h3>ユーザ情報　<a class="btn btn-primary" href="mypage_userinfo_edit.php">Edit</a></h3>
                 <table class="table">
                     <tbody>
                       <tr>
