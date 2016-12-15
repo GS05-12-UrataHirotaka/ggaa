@@ -55,10 +55,53 @@ if($status==false){
 <!-- Main[Start] -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
+        <div class="col-md-8">
             <h2>My Page</h2>
-               <div id="mpage">
+            <div id="rlist">
+                <a href="index4.html">
+                <div class="box">
+                    <div class="box_txt">BOOKA</div>
+                </div>
+                </a>
+                <a href="index2.html">
+                <div class="box">
+                    <div class="box_txt">BOOKB</div>
+                </div>
+                </a>
+                <a href="index3.html"> 
+                <div class="box">
+                    <div class="box_txt">BOOKC</div>
+                </div>
+                </a>
+                <a href="https://hi.toyo.jp/attend/toyo?lang=ja">                      
+                <div class="box">
+                    <div class="box_txt">BOOKD</div>
+                </div>
+                </a>
+                <a href="#">    
+                <div class="box">
+                    <div class="box_txt">BOOKE</div> 
+                </div>
+                </a>
+                <a href="#">
+                <div class="box">
+                    <div class="box_txt">BOOKF</div> 
+                </div>
+                </a>
+                <a href="#">  
+                <div class="box">
+                    <div class="box_txt">BOOKG</div> 
+                </div>
+                </a>
+                <a href="#">
+                <div class="box">
+                    <div class="box_txt">BOOKH</div> 
+                </div>
+                </a>   
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div id="mpage">
                <h3>ユーザ情報　<a class="btn btn-primary" href="mypage_userinfo_edit.php">Edit</a></h3>
                 <table class="table">
                     <tbody>
@@ -100,7 +143,7 @@ if($status==false){
                       </tr>
                     </tbody>
                 </table>
-                <h3>研究情報　<a class="btn btn-primary" href="edit_view.php">Edit</a></h3>
+                <h3>研究情報　<a class="btn btn-primary" href="mypage_rscinfo_edit.php">Edit</a></h3>
                 <table class="table">
                     <tbody>
                       <tr>
@@ -119,13 +162,7 @@ if($status==false){
                 </table>
             </div>
         </div>
-        <div class="col-md-1"></div>
     </div>
-    
-    <nav>
-        <p style="text-align:right;padding-right:30px;"><font color="white">PHOTO taken by manfred majer</font></p>
-    </nav>
-    
 </div>
 <!-- Main[End] -->
 </body>

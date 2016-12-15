@@ -48,18 +48,72 @@ if($_SESSION["role"]!="2"){
         <div class="col-md-6">
             <form method="post" action="adm_user_insert_act.php" style="display:inline">
                 <h2>ユーザ登録</h2>
-                <label>名前：</label>
-                <input type="text" name="name" class="form-control"><br>
-                <label>ユーザID：</label>
-                <input type="text" name="lid" class="form-control"><br>
-                <label>パスワード：</label>
-                <input type="text" name="lpw" class="form-control"><br>
-                <label>管理フラグ：</label>
-                <input type="radio" name="role" class="inlineRadioOptions" value="1" id="aduser"><label for="aduser">管理者</label>
-                <input type="radio" name="role" class="inlineRadioOptions" value="0"  id="nuser" checked><label for="nuser">一般ユーザ</label><br><br>
-                <label>利用フラグ：</label>
-                <input type="radio" name="life_flg" class="inlineRadioOptions" value="0" checked id="active"><label for="active">利用中</label>
-                <input type="radio" name="life_flg" class="inlineRadioOptions" value="1" id="suspend"><label for="suspend">利用停止</label><br><br>
+                <table class="table">
+                    <tbody>
+                      <tr>
+                        <th>ユーザID</th>
+                        <td><input type="text" name="lid" class="form-control">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>パスワード</th>
+                        <td><input type="text" name="lpw" class="form-control">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>氏名</th>
+                        <td><input type="text" name="name" class="form-control">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>メールアドレス</th>
+                        <td><input type="text" name="mail" class="form-control">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>所属</th>
+                        <td><input type="text" name="affiliation" class="form-control">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>部署</th>
+                        <td><input type="text" name="department" class="form-control">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>職名</th>
+                        <td><input type="text" name="title" class="form-control">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>その他</th>
+                        <td><input type="text" name="other" class="form-control">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>URL</th>
+                        <td><input type="text" name="url" class="form-control">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>関心領域</th>
+                        <td><input type="text" name="field" class="form-control">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>ロール</th>
+                        <td><input type="radio" name="role" class="inlineRadioOptions" value="1" id="aduser"><label for="aduser">管理者</label>
+                        <input type="radio" name="role" class="inlineRadioOptions" value="0"  id="nuser" checked><label for="nuser">研究者</label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>利用フラグ</th>
+                        <td><input type="radio" name="life_flg" class="inlineRadioOptions" value="0" checked id="active"><label for="active">利用中</label>
+                        <input type="radio" name="life_flg" class="inlineRadioOptions" value="1" id="suspend"><label for="suspend">利用停止</label>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
                 <button type="submit" class="btn btn-primary">送信</button>
                 <a class="btn btn-danger" href="adm_user_list.php">キャンセル</a>
             </form>

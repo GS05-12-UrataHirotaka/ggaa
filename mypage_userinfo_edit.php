@@ -3,10 +3,6 @@ session_start();
 include('functions.php');
 ssidCheck();
 
-if($_SESSION["role"]!="1"){
-    exit("Error!!");
-}
-
 //1.セッションからユーザIDを取得
 $lid = $_SESSION["lid"];
 
@@ -41,12 +37,17 @@ if($status==false){
 
 <!-- Head[Start] -->
 <?php  
-    if($_SESSION["role"]=="1"){
-        include("admin_menu.php");
+    if(isset($_SESSION["role"])){
+        if($_SESSION["role"]=="0"){
+            include("menu_rsc.php");
+        }else if($_SESSION["role"]=="1"){
+            include("menu_org.php");
+        }else if($_SESSION["role"]=="2"){
+            include("menu_adm.php");
+        }
     }else{
-        include("bm_menu.php");
+        include("menu_gst.php");
     }
-    
 ?>
 <!-- Head[End] -->
 

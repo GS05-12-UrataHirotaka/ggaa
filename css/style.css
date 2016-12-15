@@ -58,10 +58,6 @@ body{
 #news td{
     text-align: left;
 }
-#news .right{
-    text-align: right;
-    margin: 10px 180px 50px 0;
-}
 
 /*記事*/
 .feature{
@@ -191,6 +187,7 @@ body{
 
 #rlist{
     padding: 10px 20px 20px;
+    text-align: center;
 }
 
 #mpage{

@@ -92,10 +92,10 @@ topBtn.click(function(){
     <!-- お知らせ -->
     <div class="row" id="news">
         <h2 class="topic">NEWS</h2>
-        <table class="table table-hover">
+        <table class="table table-hover" style="margin-bottom:50px;">
             <tbody>
                 <tr>
-                    <th>2015.07.12</th>
+                 <th>2015.07.12</th>
                     <td>
                         <a href="#">募集始めました！</a>
                     </td>
@@ -112,11 +112,14 @@ topBtn.click(function(){
                         <a href="#">ベータ版サービスを開始しました</a>
                     </td>
                 </tr>
+                <tr>
+                    <th></th>
+                    <td style="text-align:right;">
+                        <a href="#">ニュース一覧を見る</a>
+                    </td>
+                </tr>
             </tbody>
         </table>
-        <div class="right">
-            <a href="#">ニュース一覧を見る</a>
-        </div>
     </div>
             
     <!-- コンセプト -->
@@ -126,7 +129,7 @@ topBtn.click(function(){
             <div class="fimage1"></div>
         </div>
         <div class="col-md-6">
-            <p class="lead" style="color:#ffffff">大学などの研究機関と民間企業が連携することで、新しいものを社会に生み出す。<br>「産学連携」は、研究とビジネスをつなぐキーワードです。しかし、実際に企業でアカデミックな知識が必要となっても、それに対応した研究者が見つからない。逆に、研究内容を社会に活かそうとしても、企業とのつながりがない。<br>「connectab」は、そんな課題を解決し、アカデミックな世界とビジネスの世界をつなぐ（connect academy to business）サービスです。
+            <p class="lead" style="color:#ffffff">専門家の知識を得たい、専門家の監修がほしい、だけど、それに対応した研究者がなかなか見つからない。<br>研究をしたいが資金がない、研究をビジネスに活かしたい、だけど、それに対応した企業がなかなか見つからない。<br>「CONNECTAB」は、そんな課題を解決し、アカデミックな世界とビジネスの世界をつなぐ（connect academy to business）サービスです。
             </p>
         </div>
     </div>
