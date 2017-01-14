@@ -15,10 +15,15 @@ body{
 
 /*全体共通*/
 .container-fluid{
-    padding-top: 100px;
+    padding-top: 70px;
     }
 .row{
     margin: 0 auto;
+}
+
+h2{
+    margin-left: 20px;
+    color: #1987e5;
 }
 
 /*見出し共通*/
@@ -107,11 +112,36 @@ body{
 }
 
 .fimage5{
-    background-image:url(../img/vietnam10.jpg);
-    background-repeat: no-repeat;
+    background: url(../img/rsc_2.PNG) center center no-repeat;
     background-size: contain;
     background-position: center;
     height:200px;
+    margin: 20px;
+}
+
+
+.fimage6{
+    background: url(../img/cake.png) center center no-repeat;
+    height:200px;
+    width: 200px;
+    margin: 20px 85px;
+    border-radius: 400px;
+}
+
+.fimage7{
+    background: url(../img/sangoku.png) center center no-repeat;
+    height:200px;
+    width: 200px;
+    margin: 20px 85px;
+    border-radius: 400px;
+}
+
+.fimage8{
+    background: url(../img/news.png) center center no-repeat;
+    height:200px;
+    width: 200px;
+    margin: 20px 85px;
+    border-radius: 400px;
 }
 
 .feature p{
@@ -165,8 +195,8 @@ body{
 /*ボックス*/
 .box {
     display: inline-block;
-    width: 150px;
-    height: 150px;
+    width: 430px;
+    height: 200px;
     margin:7px;
     cursor: pointer;
     background-color: aliceblue;
@@ -174,15 +204,19 @@ body{
 .box:hover {
     background-color: #70bcff;
 }
-.box img{
-    position:relative;
-    top:15px;
-    left:31px;
+.box_img{
+    float: left;
+}
+.box_title{
+    margin-top:20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
 }
 .box_txt{
-    text-align: center;
-    margin-top: 15px;
-    font-weight:bold;
+    margin-top:15px;
+    text-align: left;
+    margin-left: 215px;
 }
 
 #rlist{
@@ -203,3 +237,60 @@ body{
     padding: 10px 20px 20px;
     background-color:rgba(122,194,232,0.1);
 }
+
+.tab-content{
+    padding:20px;
+    min-height: 300px;
+}
+
+/*tab-pane*/
+.tab-content h1 {
+	position: relative;
+	padding: .25em 0 .5em .75em;
+	border-left: 6px solid #3498db;
+    font-size: 24px;
+}
+.tab-content h1::after {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	content: '';
+	width: 100%;
+	height: 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.tab-content h2 {
+	position: relative;
+	padding: .25em 0 .5em .75em;
+	border-left: 6px solid #3498db;
+    font-size: 20px;
+}
+.tab-content h2::after {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	content: '';
+	width: 100%;
+	height: 0;
+}
+
+.tab-content table {
+	border-collapse: collapse;
+	text-align: left;
+	line-height: 1.5;
+}
+.tab-content table th {
+	width: 150px;
+	padding: 10px;
+	font-weight: bold;
+	vertical-align: top;
+	border: 1px solid #ccc;
+}
+.tab-content table td {
+	width: 350px;
+	padding: 10px;
+	vertical-align: top;
+	border: 1px solid #ccc;
+}
+

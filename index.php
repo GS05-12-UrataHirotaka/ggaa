@@ -15,53 +15,7 @@ include('functions.php');
 <link rel="stylesheet" href="css/style.css">
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-<!-- スムーズスクロール部分の記述 -->
-<script>
-$(function(){
-   // #で始まるアンカーをクリックした場合に処理
-   $('a[href^=#]').click(function() {
-      // スクロールの速度
-      var speed = 1000; // ミリ秒
-      // アンカーの値取得
-      var href= $(this).attr("href");
-      // 移動先を取得
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      // 移動先を数値で取得
-      var position = target.offset().top;
-      // スムーススクロール
-      $('body,html').animate({scrollTop:position}, speed, 'swing');
-      return false;
-   });
-});
-
-<!-- ページトップに戻る -->
-//■page topボタン
-$(function(){
-var topBtn=$('#pageTop');
-topBtn.hide();
- 
-//◇ボタンの表示設定
-$(window).scroll(function(){
-  if($(this).scrollTop()>80){
-    //---- 画面を80pxスクロールしたら、ボタンを表示する
-    topBtn.fadeIn();
-  }else{
-    //---- 画面が80pxより上なら、ボタンを表示しない
-    topBtn.fadeOut();
-  } 
-});
- 
-// ◇ボタンをクリックしたら、スクロールして上に戻る
-topBtn.click(function(){
-  $('body,html').animate({
-  scrollTop: 0},500);
-  return false;
-});
-
-});
-    
-</script>
+<script type="text/javascript" src="js/functions.js"></script>
 </head>
  
 <body>
@@ -124,19 +78,19 @@ topBtn.click(function(){
             
     <!-- コンセプト -->
     <div class="row feature" style="background-color: #7AC2E8;">
-        <h2 class="topic" style="color: #ffffff;">研究とビジネスをもっと近づける</h2>
+        <h2 class="topic" style="color: #ffffff;">研究とビジネスをつなぐ新しいサービス</h2>
         <div class="col-md-6">
             <div class="fimage1"></div>
         </div>
         <div class="col-md-6">
-            <p class="lead" style="color:#ffffff">専門家の知識を得たい、専門家の監修がほしい、だけど、それに対応した研究者がなかなか見つからない。<br>研究をしたいが資金がない、研究をビジネスに活かしたい、だけど、それに対応した企業がなかなか見つからない。<br>「CONNECTAB」は、そんな課題を解決し、アカデミックな世界とビジネスの世界をつなぐ（connect academy to business）サービスです。
+            <p class="lead" style="color:#ffffff">企業が新しいサービスを立ち上げる際に、専門家の知識・監修を得る。研究者が新しい領域の研究をする際に、研究資金の確保やフィールド調査の協力を得る。<br>研究者と企業とがつながれば、もっと世の中に役立つものが生まれてくるかもしれない。<br>「CONNECTAB」は、アカデミックな世界とビジネスの世界をつなぐ（connect academy to business）サービスです。
             </p>
         </div>
     </div>
     
     <!-- 主な機能 -->
     <div class="row feature">
-        <h2 class="topic">主な機能</h2>
+        <h2 class="topic">CONNECTABでできること</h2>
         <div class="col-md-4">
             <h2 class="topic">研究情報の公開</h2>
             <div class="fimage2"></div>
@@ -156,63 +110,34 @@ topBtn.click(function(){
     
     <!-- トピック -->
     <div class="row feature" style="background-color: #7AC2E8;">
-        <h2 class="topic" style="color: #ffffff;">登録されている研究者</h2>
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
-            <div id="rlist">
-                <a href="index4.html">
-                <div class="box">
-                    <div class="box_txt">研究者A</div>
-                </div>
-                </a>
-                <a href="index2.html">
-                <div class="box">
-                    <div class="box_txt">研究者B</div>
-                </div>
-                </a>
-                <a href="index3.html"> 
-                <div class="box">
-                    <div class="box_txt">研究者C</div>
-                </div>
-                </a>
-                <a href="https://hi.toyo.jp/attend/toyo?lang=ja">                      
-                <div class="box">
-                    <div class="box_txt">研究者D</div>
-                </div>
-                </a>
-                <a href="#">    
-                <div class="box">
-                    <div class="box_txt">研究者E</div> 
-                </div>
-                </a>
-                <a href="#">
-                <div class="box">
-                    <div class="box_txt">研究者F</div> 
-                </div>
-                </a>
-                <a href="#">  
-                <div class="box">
-                    <div class="box_txt">研究者G</div> 
-                </div>
-                </a>
-                <a href="#">
-                <div class="box">
-                    <div class="box_txt">研究者H</div> 
-                </div>
-                </a>   
-            </div>
+        <h2 class="topic" style="color: #ffffff;">例えば...</h2>
+        <div class="col-md-4">
+            <h2 class="topic" style="color: #ffffff;">食品メーカー×栄養学</h2>
+            <div class="fimage6"></div>
+            <p class="lead flead">栄養学の小柴先生監修のもと、健康に良いケーキを開発！</p>
+        </div>
+        <div class="col-md-4">
+            <h2 class="topic" style="color: #ffffff;">ゲーム開発会社×歴史学</h2>
+            <div class="fimage7"></div>
+            <p class="lead flead">三国志研究の大家・西国先生監修のもと、本格歴史ゲームを開発！</p>
+        </div>
+        <div class="col-md-4">
+            <h2 class="topic" style="color: #ffffff;">ニュース配信会社×観光学</h2>
+            <div class="fimage8"></div>
+            <p class="lead flead">観光学の権威・smith先生が、ニュース記事の信頼性を保証！</p>
         </div>
         <div class="col-md-1"></div>
     </div>
     
     <!-- more info -->
     <div class="row feature">
-        <h2 class="topic">More Info</h2>
+        <h2 class="topic">More Infomation</h2>
         <div class="col-md-6">
             <div class="fimage5"></div>
         </div>
         <div class="col-md-6">
-            <p class="lead">推奨環境：…</p>
+            <p class="lead">
+            推奨環境：最新バージョンのFireFox,Google Chrome<br>※CONNECTABは現在開発中のサービスです。まだ一般の方向けにオープンはされていません。</p>
         </div>
     </div>
 </div>

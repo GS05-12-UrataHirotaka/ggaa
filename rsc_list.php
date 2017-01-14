@@ -3,26 +3,7 @@
 session_start();
 include('functions.php');
 
-//1.DB接続
 $pdo = db_con();
-
-//２．データ選択SQL作成
-$stmt = $pdo->prepare("SELECT * FROM gs_user_table ORDER BY id DESC");
-$status = $stmt->execute();
-
-//３．データ表示
-$view="";
-if($status==false){
-  queryError($stmt);
-}else{
-  while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
-    $view .= '<a href="rsc_view.php?id='.$result["id"].'">';
-    $view .= '<div class="box">';
-    $view .= '<div class="box_txt">'.$result["name"].'</div>';
-    $view .= '</div>';
-    $view .= '</a>';
-  }
-}
 ?>
 
 <!DOCTYPE html>
@@ -36,6 +17,7 @@ if($status==false){
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
 </head>
 <body id="main">
 
@@ -58,14 +40,10 @@ if($status==false){
 <!-- Main[Start] -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
-            <div id="rlist">
-                <h2>Researcher's List</h2>
-                <?=$view?>   
-            </div>
+        <div class="col-md-12">
+          <h2 style="text-align:center;">Researcher's List</h2>
+           <?php include("rsc_list-box.php")?> 
         </div>
-        <div class="col-md-1"></div>
     </div>
 
     <nav>

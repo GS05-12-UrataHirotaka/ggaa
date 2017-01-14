@@ -22,6 +22,7 @@ if($_SESSION["role"]!="2"){
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
 </head>
 <body>
 
@@ -46,47 +47,47 @@ if($_SESSION["role"]!="2"){
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
+           <h2>Add User</h2>
             <form method="post" action="adm_user_insert_act.php" style="display:inline">
-                <h2>ユーザ登録</h2>
                 <table class="table">
                     <tbody>
                       <tr>
-                        <th>ユーザID</th>
+                        <th>User ID</th>
                         <td><input type="text" name="lid" class="form-control">
                         </td>
                       </tr>
                       <tr>
-                        <th>パスワード</th>
+                        <th>Password</th>
                         <td><input type="text" name="lpw" class="form-control">
                         </td>
                       </tr>
                       <tr>
-                        <th>氏名</th>
+                        <th>Name</th>
                         <td><input type="text" name="name" class="form-control">
                         </td>
                       </tr>
                       <tr>
-                        <th>メールアドレス</th>
+                        <th>Mail</th>
                         <td><input type="text" name="mail" class="form-control">
                         </td>
                       </tr>
                       <tr>
-                        <th>所属</th>
+                        <th>Affiliation</th>
                         <td><input type="text" name="affiliation" class="form-control">
                         </td>
                       </tr>
                       <tr>
-                        <th>部署</th>
+                        <th>Department</th>
                         <td><input type="text" name="department" class="form-control">
                         </td>
                       </tr>
                       <tr>
-                        <th>職名</th>
+                        <th>Title</th>
                         <td><input type="text" name="title" class="form-control">
                         </td>
                       </tr>
                       <tr>
-                        <th>その他</th>
+                        <th>Other</th>
                         <td><input type="text" name="other" class="form-control">
                         </td>
                       </tr>
@@ -96,26 +97,28 @@ if($_SESSION["role"]!="2"){
                         </td>
                       </tr>
                       <tr>
-                        <th>関心領域</th>
+                        <th>Field</th>
                         <td><input type="text" name="field" class="form-control">
                         </td>
                       </tr>
                       <tr>
-                        <th>ロール</th>
-                        <td><input type="radio" name="role" class="inlineRadioOptions" value="1" id="aduser"><label for="aduser">管理者</label>
-                        <input type="radio" name="role" class="inlineRadioOptions" value="0"  id="nuser" checked><label for="nuser">研究者</label>
+                        <th>Role</th>
+                        <td>
+                        <input type="radio" name="role" class="inlineRadioOptions" value="2" id="aduser"><label for="aduser">Organization</label>
+                        <input type="radio" name="role" class="inlineRadioOptions" value="1" id="aduser"><label for="aduser">Administrator</label>
+                        <input type="radio" name="role" class="inlineRadioOptions" value="0"  id="nuser" checked><label for="nuser">Researcher</label>
                         </td>
                       </tr>
                       <tr>
-                        <th>利用フラグ</th>
-                        <td><input type="radio" name="life_flg" class="inlineRadioOptions" value="0" checked id="active"><label for="active">利用中</label>
-                        <input type="radio" name="life_flg" class="inlineRadioOptions" value="1" id="suspend"><label for="suspend">利用停止</label>
+                        <th>Life Flag</th>
+                        <td><input type="radio" name="life_flg" class="inlineRadioOptions" value="0" checked id="active"><label for="active">Active</label>
+                        <input type="radio" name="life_flg" class="inlineRadioOptions" value="1" id="suspend"><label for="suspend">Suspended</label>
                         </td>
                       </tr>
                     </tbody>
                 </table>
-                <button type="submit" class="btn btn-primary">送信</button>
-                <a class="btn btn-danger" href="adm_user_list.php">キャンセル</a>
+                <button type="submit" class="btn btn-primary">Send</button>
+                <a class="btn btn-danger" href="adm_user_list.php">Cancel</a>
             </form>
         </div>
         <div class="col-md-3"></div>
@@ -124,6 +127,7 @@ if($_SESSION["role"]!="2"){
 <!-- Main[End] -->
 
 <nav>
+<p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p>
 </nav>
 
 </body>

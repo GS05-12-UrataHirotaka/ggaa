@@ -10,64 +10,11 @@ if($_SESSION["role"]!="2"){
 
 //1.DB接続
 $pdo = db_con();
-
-//２．データ選択SQL作成
-$stmt = $pdo->prepare("SELECT * FROM gs_user_table");
-$status = $stmt->execute();
-
-//３．データ表示
-$view="";
-if($status==false){
-  queryError($stmt);
-}else{
-  while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
-    $view .= "<tr>";
-    $view .= "<td>";
-    $view .= h($result["name"]);
-    $view .= "</td>";
-    $view .= "<td>";
-    $view .= h($result["lid"]);
-    $view .= "</td>";
-    $view .= "<td>";
-    $view .= h($result["lpw"]);
-    $view .= "</td>";
-    $view .= "<td>";
-    $view .= h($result["role"]);
-    $view .= "</td>";
-    $view .= "<td>";
-    $view .= h($result["life_flg"]);
-    $view .= "</td>";
-    $view .= "<td>";
-    $view .= h($result["life_flg"]);
-    $view .= "</td>";
-    $view .= "<td>";
-    $view .= h($result["life_flg"]);
-    $view .= "</td>";
-    $view .= "<td>";
-    $view .= h($result["life_flg"]);
-    $view .= "</td>";
-    $view .= "<td>";
-    $view .= h($result["life_flg"]);
-    $view .= "</td>";
-    $view .= "<td>";
-    $view .= h($result["life_flg"]);
-    $view .= "</td>";
-    $view .= "<td>";
-    $view .= h($result["life_flg"]);
-    $view .= "</td>";
-    $view .= "<td>";
-    $view .= '<a class="btn btn-primary" href="adm_user_update.php?id='.$result["id"].'">';
-    $view .= 'Edit';
-    $view .= '</a>';  
-    $view .= "</td>";
-    $view .= "</tr>";
-  }
-
-}
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,7 +24,9 @@ if($status==false){
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
 </head>
+
 <body id="main">
 
 <!-- Head[Start] -->
@@ -99,37 +48,18 @@ if($status==false){
 <!-- Main[Start] -->
 <div class="container-fluid">
     <div class="row">
+       <h2>User's List　<a class="btn btn-primary" href="adm_user_insert.php">Add User</a></h2>
         <div class="col-md-12">
-           <h2>User's List　<a class="btn btn-primary" href="adm_user_insert.php">Add User</a></h2>
            <div id="ulist">
-            <table class="table">
-            <thead>
-               <tr>
-                <th>Name</th>
-                <th>UserID</th>
-                <th>Password</th>
-                <th>Role</th>
-                <th>Active</th>
-                <th>Mail</th>
-                <th>Affiliation</th>
-                <th>Life_flg</th>
-                <th>Research</th>
-                <th>Business</th>
-                <th>Insert</th>
-                <th></th>
-               </tr>
-            </thead>
-            <tbody>
-                <?=$view?>
-            </tbody>
-            </table>
-          </div>
+                <?php include("adm_user_list_table.php")?> 
+           </div>
         </div>
     </div>
 </div>
 <!-- Main[End] -->
 
 <nav>
+<p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p>
 </nav>
 
 </body>

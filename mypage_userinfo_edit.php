@@ -4,14 +4,14 @@ include('functions.php');
 ssidCheck();
 
 //1.セッションからユーザIDを取得
-$lid = $_SESSION["lid"];
+$id = $_SESSION["id"];
 
 //2.DB接続など
 $pdo = db_con();
 
 //3.idから情報取得
-$stmt = $pdo->prepare("SELECT * FROM gs_user_table WHERE lid=:lid");
-$stmt->bindValue(':lid' , $lid , PDO::PARAM_INT);
+$stmt = $pdo->prepare("SELECT * FROM gs_user_table WHERE id=:id");
+$stmt->bindValue(':id' , $id , PDO::PARAM_INT);
 $status = $stmt->execute();
 
 if($status==false){
@@ -32,6 +32,7 @@ if($status==false){
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
 </head>
 <body>
 
@@ -54,20 +55,62 @@ if($status==false){
 <!-- Main[Start] -->
 <div class="container-fluid">
     <div class="row">
+       <h2>Edit Userinfo</h2>
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <form method="post" action="user_update.php" style="display:inline">
-                <h2>User Update</h2>
-                <label>Name: </label>
-                <input type="text" name="name" class="form-control" value="<?=$row["name"]?>"><br>
-                <label>User ID: </label>
-                <input type="text" name="lid" class="form-control" value="<?=$row["lid"]?>"><br>
-                <label>Password: </label>
-                <input type="text" name="lpw" class="form-control" value="<?=$row["lpw"]?>"><br>
-                <br>
+            <form method="post" action="mypage_userinfo_edit_act.php" style="display:inline">
+                <table class="table">
+                    <tbody>
+                      <tr>
+                        <th>Password</th>
+                        <td><input type="text" name="lpw" class="form-control" value="<?=$row["lpw"]?>">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Name</th>
+                        <td><input type="text" name="name" class="form-control" value="<?=$row["name"]?>">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Mail</th>
+                        <td><input type="text" name="mail" class="form-control" value="<?=$row["mail"]?>">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Affiliation</th>
+                        <td><input type="text" name="affiliation" class="form-control" value="<?=$row["affiliation"]?>">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Department</th>
+                        <td><input type="text" name="department" class="form-control" value="<?=$row["department"]?>">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Title</th>
+                        <td><input type="text" name="title" class="form-control" value="<?=$row["title"]?>">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Other</th>
+                        <td><input type="text" name="other" class="form-control" value="<?=$row["other"]?>">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>URL</th>
+                        <td><input type="text" name="url" class="form-control" value="<?=$row["url"]?>">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>Field</th>
+                        <td><input type="text" name="field" class="form-control" value="<?=$row["field"]?>">
+                        </td>
+                      </tr>
+                    </tbody>
+                </table>
                 <input type="hidden" name="id" value="<?=$id?>">
                 <button type="submit" class="btn btn-primary">Update</button>
-                <a class="btn btn-warning" href="bm_mypage.php">Cancel</a>
+                <a class="btn btn-warning" href="mypage.php">Cancel</a>　　 
             </form>
         </div>
         <div class="col-md-3"></div>
